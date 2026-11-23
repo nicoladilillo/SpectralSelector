@@ -37,14 +37,14 @@ jobs:
           python -m venv /tmp/spectralselector-release-sdist-smoke
           /tmp/spectralselector-release-sdist-smoke/bin/python -m pip install dist/*.tar.gz
           /tmp/spectralselector-release-sdist-smoke/bin/python -c "import spectralselector; assert spectralselector.__version__ != '0+unknown'"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: python-package
           path: dist/
       - name: Generate SHA-256 checksums
         working-directory: dist
         run: sha256sum * > ../SHA256SUMS
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: python-package-checksums
           path: SHA256SUMS
