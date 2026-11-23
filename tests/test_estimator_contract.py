@@ -82,5 +82,7 @@ from spectralselector import (
         "ico",
     ],
 )
+# The selectors are NumPy-only; scikit-learn skips its array-API check by design.
+@pytest.mark.filterwarnings("ignore:Skipping check check_array_api_input")
 def test_sklearn_estimator_contract(estimator):
     check_estimator(estimator)

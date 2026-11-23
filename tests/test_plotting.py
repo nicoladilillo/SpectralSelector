@@ -10,8 +10,11 @@ from spectralselector import (
     CovSelSelector,
     FCovSelSelector,
     GeneticAlgorithmSelector,
+    ICOSelector,
     IndexSelector,
+    MIVIFSelector,
     SelectivityRatioSelector,
+    SPASelector,
     VIPSelector,
     WavelengthSelectKBest,
 )
@@ -72,12 +75,21 @@ def fitted_selectors():
             random_state=4,
             wavelengths=wavelengths,
         ),
+        MIVIFSelector(3, random_state=0, wavelengths=wavelengths),
+        SPASelector(initial=1, max_features=3, cv=2, wavelengths=wavelengths),
+        ICOSelector(
+            n_intervals=4,
+            n_combinations=10,
+            cv=2,
+            random_state=5,
+            wavelengths=wavelengths,
+        ),
     ]
     return [selector.fit(X, y) for selector in selectors]
 
 
 def test_every_selector_can_plot_its_diagnostics(fitted_selectors):
-    expected_panels = [1, 1, 1, 1, 2, 2, 2, 2, 2]
+    expected_panels = [1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 2, 1]
 
     for selector, panel_count in zip(fitted_selectors, expected_panels, strict=True):
         measured_time = selector.selection_time_
