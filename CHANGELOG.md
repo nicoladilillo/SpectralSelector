@@ -135,6 +135,8 @@ kept only as development history. Between releases the package carries a
 
 ### Changed
 
+- The Conda development environment in `environment.yml` is now named
+  `spectralselector` (was `wavelength_selection_package`).
 - The dataset loaders are no longer part of the installed package:
   `spectralselector.datasets` moved to `benchmarks/_datasets/` in the source
   repository, where only the benchmark scripts use them. The dataset guide

@@ -1,4 +1,3 @@
-import matplotlib
 import numpy as np
 import pytest
 from sklearn.base import clone
@@ -17,8 +16,9 @@ from spectralselector import (
     WavelengthSelectKBest,
 )
 
+matplotlib = pytest.importorskip("matplotlib")
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt
+plt = pytest.importorskip("matplotlib.pyplot")
 
 
 @pytest.fixture(scope="module")

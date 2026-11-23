@@ -10,7 +10,7 @@ scientific assumptions and API can be discussed early.
 git clone https://github.com/nicoladilillo/spectralselector.git
 cd spectralselector
 conda env create -f environment.yml
-conda activate wavelength_selection_package
+conda activate spectralselector
 ```
 
 Run the local checks with:

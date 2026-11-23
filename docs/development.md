@@ -10,7 +10,7 @@ Create the repository's named Conda environment, then activate it:
 
 ```bash
 conda env create -f environment.yml
-conda activate wavelength_selection_package
+conda activate spectralselector
 ```
 
 `environment.yml` fixes the Python line and installs the exact Python package

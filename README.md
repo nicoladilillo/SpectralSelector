@@ -74,7 +74,7 @@ in [`requirements-dev.lock`](requirements-dev.lock):
 
 ```bash
 conda env create -f environment.yml
-conda activate wavelength_selection_package
+conda activate spectralselector
 ```
 
 ## Quick start

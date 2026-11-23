@@ -1,4 +1,4 @@
-name: wavelength_selection_package
+name: spectralselector
 channels:
   - conda-forge
 dependencies:
