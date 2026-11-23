@@ -1,0 +1,35 @@
+{
+  "source": {
+    "package": "plsVarSel",
+    "version": "0.10.0",
+    "language": "R",
+    "function": "covSel",
+    "repository": "https://github.com/khliland/plsVarSel"
+  },
+  "input": {
+    "construction": "rows = arange(1, 19); six analytic X columns and two analytic Y columns",
+    "n_samples": 18,
+    "n_features": 6,
+    "n_responses": 2
+  },
+  "n_features_to_select": 4,
+  "selected_indices": [
+    4,
+    0,
+    2,
+    3
+  ],
+  "x_explained_variance": [
+    0.44106912090997308,
+    0.8011521776868724,
+    0.9023347760412681,
+    0.9896243603906128
+  ],
+  "y_explained_variance": [
+    0.29644069250941985,
+    0.8249340844309663,
+    0.948858506015692,
+    0.9892014469330097
+  ],
+  "absolute_tolerance": 1e-12
+}

@@ -1,0 +1,9 @@
+name: wavelength_selection_package
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip>=24
+  - pip:
+      - -r requirements-dev.lock
+      - -e .

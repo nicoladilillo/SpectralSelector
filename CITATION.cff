@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use SpectralSelector in research, please cite the software and its JOSS paper."
+title: "SpectralSelector: Scikit-learn-compatible wavelength selection for chemometric workflows"
+type: software
+authors:
+  - family-names: Dilillo
+    given-names: Nicola
+repository-code: "https://github.com/nicoladilillo/spectralselector"
+url: "https://spectralselector.readthedocs.io"
+license: MIT
+version: 0.1.0
+date-released: 2026-11-21
+keywords:
+  - chemometrics
+  - spectroscopy
+  - variable selection
+  - wavelength selection
+  - scikit-learn
+preferred-citation:
+  type: article
+  title: "SpectralSelector: Scikit-learn-compatible wavelength selection for chemometric workflows"
+  authors:
+    - family-names: Dilillo
+      given-names: Nicola
+  journal: "Journal of Open Source Software"
+  year: 2026
+  notes: "Manuscript in preparation; volume, issue, pages, and DOI will be added after publication."

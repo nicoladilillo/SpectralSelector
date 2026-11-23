@@ -1,0 +1,1617 @@
+{
+  "cache": {
+    "directory": "benchmarks/.cache/matrix",
+    "executed": 456,
+    "reused": 0
+  },
+  "code_fingerprint": "fa2812f3f981e72854edf1fcfbb5991add959294bcdd8c52db99fe473b70267c",
+  "configuration": {
+    "cache_dir": "benchmarks/.cache/matrix",
+    "classification_scoring": "balanced_accuracy",
+    "data_home": null,
+    "datasets": "corn,diesel,shootout,nirbench_1,nirbench_2,nirbench_3,nirbench_5,nirbench_6,nirbench_7,nirbench_8,nirbench_9,nirbench_10,nirbench_11,nirbench_13,nirbench_15,nirbench_16,nirbench_17,nirbench_18,nirbench_19,nirbench_20,nirbench_21,nirbench_22,nirbench_23,nirbench_24,nirbench_25,nirbench_26,nirbench_27,nirbench_28,nirbench_29,nirbench_30",
+    "force": false,
+    "inner_splits": 3,
+    "lettuce_path": null,
+    "methods": "all",
+    "n_jobs": 4,
+    "nirbench_path": "NIRBENCH_DL_v0.1",
+    "outer_splits": 3,
+    "output": "benchmarks/reports/v0.1.0",
+    "profile": "smoke",
+    "random_state": 42,
+    "regression_scoring": "neg_root_mean_squared_error",
+    "rerun_failed": false,
+    "resolved_selector_seeds": [
+      42
+    ],
+    "resume": true,
+    "selector_seeds": null
+  },
+  "dataset_provenance": [
+    {
+      "citation": "Eigenvector corn data; used by Wang et al. (2025).",
+      "content_sha256": "d3541d932d59c265b0b08fc106950408b91450979fc168186641ec204e13a0ac",
+      "fixed_test_rows": 0,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "Distributed with permission by Eigenvector Research.",
+      "loader": "spectralselector.datasets.fetch_corn",
+      "loader_arguments": {
+        "instrument": "m5",
+        "target": "oil"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "corn",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        80,
+        700
+      ],
+      "source": "https://www.eigenvector.com/data/Corn/index.html",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "oil"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 2498.0,
+        "minimum": 1100.0,
+        "n_features": 700,
+        "sha256": "89bc69c36974da072b54c38eb77f6172d54f6f17f3b8160f806d8c4676f7c0ee"
+      }
+    },
+    {
+      "citation": "SWRI/Eigenvector BP50 data; used by Wang et al. (2025).",
+      "content_sha256": "793b90d6dd6f93e021ab7139beb28724a5b230f91954226d26e3ae152dd2a8c0",
+      "fixed_test_rows": 0,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "Distributed by Eigenvector Research with SWRI attribution.",
+      "loader": "spectralselector.datasets.fetch_diesel",
+      "loader_arguments": {
+        "subset": "wang2025",
+        "target": "BP50"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "diesel_bp50",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        246,
+        401
+      ],
+      "source": "https://www.eigenvector.com/data/SWRI/index.html",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "BP50"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1550.0,
+        "minimum": 750.0,
+        "n_features": 401,
+        "sha256": "5e14626e6746e037c27e39060136e3c20101a12583d695bcb1efd4e74c62e27b"
+      }
+    },
+    {
+      "citation": "IDRC 2002 Shootout data; Shootout-3 in Wang et al. (2025).",
+      "content_sha256": "c158a097cf8d28b4a1fb8c0654fe29fa344f943d4616b40bbb5f4180d95a6a76",
+      "fixed_test_rows": 0,
+      "groups": {
+        "n_unique": 3,
+        "present": true
+      },
+      "license": "Public benchmark distributed by Eigenvector Research.",
+      "loader": "spectralselector.datasets.fetch_shootout",
+      "loader_arguments": {
+        "instrument": 1,
+        "split": "all",
+        "target": "assay"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "shootout_2002",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        655,
+        650
+      ],
+      "source": "https://www.eigenvector.com/data/tablets/index.html",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "assay"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1898.0,
+        "minimum": 600.0,
+        "n_features": 650,
+        "sha256": "32f86ceb310a9de050ab43e1819918b07658cbad5d0bc1f1d38819b3de163169"
+      }
+    },
+    {
+      "citation": "Nielsen et al. (2003), doi:10.1094/CCHEM.2003.80.3.274",
+      "content_sha256": "ffd919a603ef2849407659c422f1b5f8bcb7d3d40f7b72e78f48d2f5d2ad7e70",
+      "fixed_test_rows": 108,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "Written redistribution permission (University of Copenhagen)",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "1-Wheat_kernels_protein"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_1",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        523,
+        100
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/1-Wheat_kernels_protein",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "protein"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1048.0,
+        "minimum": 850.0,
+        "n_features": 100,
+        "sha256": "e1dae20fc5a5349de11c21e102acc45b24e294e424da41cf738465ed6f804791"
+      }
+    },
+    {
+      "citation": "D. Bertrand / INRA, ChemProject",
+      "content_sha256": "38eab750ed186e5aa44d37c159b3fc6f9b3062b0b4dbb461d1683b1d6af3ef08",
+      "fixed_test_rows": 28,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "Written redistribution permission (ChemHouse)",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "2-Wheat_flours_protein"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_2",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        140,
+        525
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/2-Wheat_flours_protein",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "PROTREF"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 2496.0,
+        "minimum": 400.0,
+        "n_features": 525,
+        "sha256": "fdecd061180ec0a744c1a0cf97cde27fe3dd341505244d867b788b29f5033104"
+      }
+    },
+    {
+      "citation": "Tecator AB, StatLib Tecator dataset",
+      "content_sha256": "1f110c77ecd053d8cad6ce7755b07d24d3c07dae332010fe8998a189040b2ef7",
+      "fixed_test_rows": 43,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "Public domain with attached permission note",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "3-Tecator_moisture"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_3",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        215,
+        100
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/3-Tecator_moisture",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "Moisture"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1048.0,
+        "minimum": 850.0,
+        "n_features": 100,
+        "sha256": "e1dae20fc5a5349de11c21e102acc45b24e294e424da41cf738465ed6f804791"
+      }
+    },
+    {
+      "citation": "Kusumiyati et al., doi:10.17632/k55b8mvs84.2",
+      "content_sha256": "635dc071509c265dc74e0883fb485e1afa01cd3dc7db00358e812b9f4127c7d3",
+      "fixed_test_rows": 100,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "5-Cucurbitaceae_fruit_ssc"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_5",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        300,
+        229
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/5-Cucurbitaceae_fruit_ssc",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "SSC (%)"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1065.0,
+        "minimum": 381.0,
+        "n_features": 229,
+        "sha256": "5d4479ed26746e0a9632b07b81c5e12b1f8b4b23977d4db0fb607f2a8399655c"
+      }
+    },
+    {
+      "citation": "Ibanez et al., doi:10.5281/zenodo.10633732",
+      "content_sha256": "d60d0b3132da41dcc80ced18d158ba861598355dc53cea2179464e7083d32249",
+      "fixed_test_rows": 42,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY-SA 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "6-NIR_tomato1_ssc"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_6",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        168,
+        174
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/6-NIR_tomato1_ssc",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "SSC (\u00baBrix)"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 2094.653076,
+        "minimum": 902.9647217,
+        "n_features": 174,
+        "sha256": "774cc97222f8d6c3bcdfab5adde9800059d0b88549077fc1c77df749e92b4c16"
+      }
+    },
+    {
+      "citation": "Ibanez et al., doi:10.5281/zenodo.10633732",
+      "content_sha256": "bf999e7624937cfbe55a51c097526ce894c39f327378e87853b95e17d7045060",
+      "fixed_test_rows": 45,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY-SA 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "7-NIR_tomato2_ssc"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_7",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        180,
+        174
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/7-NIR_tomato2_ssc",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "SSC (\u00baBrix)"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 2094.653076,
+        "minimum": 902.9647217,
+        "n_features": 174,
+        "sha256": "774cc97222f8d6c3bcdfab5adde9800059d0b88549077fc1c77df749e92b4c16"
+      }
+    },
+    {
+      "citation": "Ibanez et al., doi:10.5281/zenodo.10633732",
+      "content_sha256": "37db555cd14954fbabcc9b8ed1a57eb505544a36302278eca8e8142edb32153d",
+      "fixed_test_rows": 26,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY-SA 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "8-NIR_tomato3_ssc"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_8",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        106,
+        174
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/8-NIR_tomato3_ssc",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "SSC (\u00baBrix)"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 2094.653076,
+        "minimum": 902.9647217,
+        "n_features": 174,
+        "sha256": "774cc97222f8d6c3bcdfab5adde9800059d0b88549077fc1c77df749e92b4c16"
+      }
+    },
+    {
+      "citation": "Ibanez et al., doi:10.5281/zenodo.10633732",
+      "content_sha256": "2425dd85350f52b72e63b9ca5afc29b187bb0ce03172ba43915bd8b95ea22e81",
+      "fixed_test_rows": 27,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY-SA 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "9-NIR_tomato4_ssc"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_9",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        108,
+        174
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/9-NIR_tomato4_ssc",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "SSC (\u00baBrix)"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 2094.653076,
+        "minimum": 902.9647217,
+        "n_features": 174,
+        "sha256": "774cc97222f8d6c3bcdfab5adde9800059d0b88549077fc1c77df749e92b4c16"
+      }
+    },
+    {
+      "citation": "Ibanez et al., doi:10.5281/zenodo.10633732",
+      "content_sha256": "dce289f8b669605923459596df59784b8851c642d6e47d95c44c84844abd03b4",
+      "fixed_test_rows": 22,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY-SA 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "10-NIR_tomato5_ssc"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_10",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        88,
+        174
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/10-NIR_tomato5_ssc",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "SSC (\u00baBrix)"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 2094.653076,
+        "minimum": 902.9647217,
+        "n_features": 174,
+        "sha256": "774cc97222f8d6c3bcdfab5adde9800059d0b88549077fc1c77df749e92b4c16"
+      }
+    },
+    {
+      "citation": "N. Dupuy group, ChemProject",
+      "content_sha256": "309a689c568b416b917a3cfaddb6048ab5f0446afa5927ebeef32aec39efff37",
+      "fixed_test_rows": 38,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "Written redistribution permission (ChemHouse)",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "11-Olive_oils_c16"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_11",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        187,
+        612
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/11-Olive_oils_c16",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "C16:0"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 2222.0,
+        "minimum": 1000.0,
+        "n_features": 612,
+        "sha256": "9e27b4a731dcabf037aac6cfcf64a5078feffb672d0d98ec591363968434d079"
+      }
+    },
+    {
+      "citation": "Diaz-Olivares et al., doi:10.5281/zenodo.8263430",
+      "content_sha256": "37502d96af8dedc7d1d4063a78d7eefd758e18ce5b8b808d6c2398540d09b75c",
+      "fixed_test_rows": 261,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "13-NIR_milk_protein"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_13",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        1224,
+        256
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/13-NIR_milk_protein",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "Prot"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1690.0,
+        "minimum": 960.0,
+        "n_features": 256,
+        "sha256": "2ac3b64ed5bd6d37dcf7e2770d4ecc777873821377ef83726f8369f27d80f8fc"
+      }
+    },
+    {
+      "citation": "Cruz et al. (2021), doi:10.1016/j.postharvbio.2021.111562",
+      "content_sha256": "24aa253b603e8cd32cfc7bf5610b0e7b6e850a509b168bddd3b530ab8a08ce7d",
+      "fixed_test_rows": 804,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "15-CEOT_pear_2021_brix"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_15",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        4008,
+        874
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/15-CEOT_pear_2021_brix",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "brix"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1102.362,
+        "minimum": 500.458,
+        "n_features": 874,
+        "sha256": "631fede5ce42414f0c4e599bc2d4f47e64b89fc74e7709db9fbb1b698032ab63"
+      }
+    },
+    {
+      "citation": "Passos et al. (2019), doi:10.3390/s19235165",
+      "content_sha256": "707f9c11a1aab73f40af66ba5e63685616128a7492403f17ca007f1cebc68a2d",
+      "fixed_test_rows": 660,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "16-CEOT_pears_2019_brix"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_16",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        3300,
+        875
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/16-CEOT_pears_2019_brix",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "brix"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1102.362,
+        "minimum": 499.605,
+        "n_features": 875,
+        "sha256": "72f6052919477e6dc5ab1cf28fa8fe2c5056d845d4e634b53eec445899517d02"
+      }
+    },
+    {
+      "citation": "sensAIfood / M. Lagerholm, doi:10.5281/zenodo.15838136",
+      "content_sha256": "2959e8f9147cf7d861b5baf033646fd7e1a1b710415cce6783272456bc36ead6",
+      "fixed_test_rows": 30,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "17-Barley_sensAIfood_Perten_moisture"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_17",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        150,
+        141
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/17-Barley_sensAIfood_Perten_moisture",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "Moisture"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1650.0,
+        "minimum": 950.0,
+        "n_features": 141,
+        "sha256": "5e7e17b5263dcaa178d4a3a25ed86d1ad43cd427d6b336ba79330f5f9f9dd6e2"
+      }
+    },
+    {
+      "citation": "sensAIfood / M. Lagerholm, doi:10.5281/zenodo.15838136",
+      "content_sha256": "898e9fafdf99ec8704637e87a6ed87a9e954161fcce8a51452e30491e49be100",
+      "fixed_test_rows": 30,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "18-Barley_sensAIfood_Perten_protein"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_18",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        150,
+        141
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/18-Barley_sensAIfood_Perten_protein",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "Protein"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1650.0,
+        "minimum": 950.0,
+        "n_features": 141,
+        "sha256": "5e7e17b5263dcaa178d4a3a25ed86d1ad43cd427d6b336ba79330f5f9f9dd6e2"
+      }
+    },
+    {
+      "citation": "sensAIfood / P. Berzaghi, doi:10.5281/zenodo.15838272",
+      "content_sha256": "84d6d095c2707e8fc3250e3cd403bc23382ac3499821f38cbbc4b8ae52392b31",
+      "fixed_test_rows": 80,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "19-Wheat_sensAIfood_Grainit_moisture"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_19",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        398,
+        351
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/19-Wheat_sensAIfood_Grainit_moisture",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "Moisture"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1650.0,
+        "minimum": 950.0,
+        "n_features": 351,
+        "sha256": "8d220bf3a787f19210bd3100c66993d4caae58b7bc6be62a7f53b40afd3c873b"
+      }
+    },
+    {
+      "citation": "sensAIfood / P. Berzaghi, doi:10.5281/zenodo.15838272",
+      "content_sha256": "841f72c6ba6f09bbb9104f1834f444085abdc725417363365ea377b3aa52d27b",
+      "fixed_test_rows": 80,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "20-Wheat_sensAIfood_Grainit_protein"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_20",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        403,
+        351
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/20-Wheat_sensAIfood_Grainit_protein",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "Protein"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1650.0,
+        "minimum": 950.0,
+        "n_features": 351,
+        "sha256": "8d220bf3a787f19210bd3100c66993d4caae58b7bc6be62a7f53b40afd3c873b"
+      }
+    },
+    {
+      "citation": "Cruz et al. (2021), doi:10.1016/j.postharvbio.2021.111562",
+      "content_sha256": "2f42aa0f664f79ebfd3285a387b6ab3dedb82297fea267f3452ba0d1b04f6d8d",
+      "fixed_test_rows": 804,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "21-CEOT_pear_2021_snv_brix"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_21",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        4008,
+        459
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/21-CEOT_pear_2021_snv_brix",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "brix"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1049.456,
+        "minimum": 750.52,
+        "n_features": 459,
+        "sha256": "9d56b4cb09adcbbe21a9f6bea13e2d379d1266189051112fe4e16c15e6e14a37"
+      }
+    },
+    {
+      "citation": "Anderson et al., doi:10.17632/46htwnp833.5",
+      "content_sha256": "00c8aa96a42979434264d21936116ff0fec077d64388dbf26eec0b4e2490b971",
+      "fixed_test_rows": 782,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "22-Mango_S1_dm"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_22",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        3914,
+        101
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/22-Mango_S1_dm",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "DM"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1050.0,
+        "minimum": 750.0,
+        "n_features": 101,
+        "sha256": "2aad5f618c87f14f12b0ca62dd2ef61d2ed1390f2ab459544ea142692a72267d"
+      }
+    },
+    {
+      "citation": "Anderson et al., doi:10.17632/46htwnp833.5",
+      "content_sha256": "e22273554ef30f82daef7a5b505e5eacf88df0bb5782f5eedd4ae33c8e13c9a7",
+      "fixed_test_rows": 277,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "23-Mango_S2_dm"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_23",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        1363,
+        101
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/23-Mango_S2_dm",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "DM"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1050.0,
+        "minimum": 750.0,
+        "n_features": 101,
+        "sha256": "2aad5f618c87f14f12b0ca62dd2ef61d2ed1390f2ab459544ea142692a72267d"
+      }
+    },
+    {
+      "citation": "Anderson et al., doi:10.17632/46htwnp833.5",
+      "content_sha256": "8870f8e8fe81ed60e48b8bdf6f287bc874005d3c4038ccd9ae6092e9903e3c66",
+      "fixed_test_rows": 1002,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "24-Mango_S3_dm"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_24",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        4966,
+        101
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/24-Mango_S3_dm",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "DM"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1050.0,
+        "minimum": 750.0,
+        "n_features": 101,
+        "sha256": "2aad5f618c87f14f12b0ca62dd2ef61d2ed1390f2ab459544ea142692a72267d"
+      }
+    },
+    {
+      "citation": "Anderson et al., doi:10.17632/46htwnp833.5",
+      "content_sha256": "7eb9d3059cd7f1a6eea227cb07bdece26d927048868962a2b281936ccc9f59bf",
+      "fixed_test_rows": 290,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "25-Mango_S4_dm"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_25",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        1448,
+        101
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/25-Mango_S4_dm",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "DM"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1050.0,
+        "minimum": 750.0,
+        "n_features": 101,
+        "sha256": "2aad5f618c87f14f12b0ca62dd2ef61d2ed1390f2ab459544ea142692a72267d"
+      }
+    },
+    {
+      "citation": "sensAIfood / M. Lagerholm, doi:10.5281/zenodo.15838136",
+      "content_sha256": "048bee1a98a33e9122ac0fc2eda10a5f3f1bdf14740fa07e29e96528b7aa3430",
+      "fixed_test_rows": 30,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "26-Corn_sensAIfood_Perten_moisture"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_26",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        150,
+        141
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/26-Corn_sensAIfood_Perten_moisture",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "Moisture"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1650.0,
+        "minimum": 950.0,
+        "n_features": 141,
+        "sha256": "5e7e17b5263dcaa178d4a3a25ed86d1ad43cd427d6b336ba79330f5f9f9dd6e2"
+      }
+    },
+    {
+      "citation": "sensAIfood / M. Lagerholm, doi:10.5281/zenodo.15838136",
+      "content_sha256": "e1c6e2c17b6281230bb919fcdf943b734fc1646c90123e69f1f6a83d5229d759",
+      "fixed_test_rows": 30,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "27-Corn_sensAIfood_Perten_protein"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_27",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        150,
+        141
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/27-Corn_sensAIfood_Perten_protein",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "Protein"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1650.0,
+        "minimum": 950.0,
+        "n_features": 141,
+        "sha256": "5e7e17b5263dcaa178d4a3a25ed86d1ad43cd427d6b336ba79330f5f9f9dd6e2"
+      }
+    },
+    {
+      "citation": "sensAIfood / M. Lagerholm, doi:10.5281/zenodo.15838136",
+      "content_sha256": "634040ba0220ff9d1a1b05d78f1a2275ab35c9579ac32f973e6eab035521897a",
+      "fixed_test_rows": 30,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "28-Wheat_sensAIfood_Perten_moisture"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_28",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        150,
+        141
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/28-Wheat_sensAIfood_Perten_moisture",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "Moisture"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1650.0,
+        "minimum": 950.0,
+        "n_features": 141,
+        "sha256": "5e7e17b5263dcaa178d4a3a25ed86d1ad43cd427d6b336ba79330f5f9f9dd6e2"
+      }
+    },
+    {
+      "citation": "sensAIfood / M. Lagerholm, doi:10.5281/zenodo.15838136",
+      "content_sha256": "aa48690f3eccbbeb3edccae500887ac8536887a0384b4766324d1d495461f78f",
+      "fixed_test_rows": 30,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "29-Wheat_sensAIfood_Perten_protein"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_29",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        150,
+        141
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/29-Wheat_sensAIfood_Perten_protein",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "Protein"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 1650.0,
+        "minimum": 950.0,
+        "n_features": 141,
+        "sha256": "5e7e17b5263dcaa178d4a3a25ed86d1ad43cd427d6b336ba79330f5f9f9dd6e2"
+      }
+    },
+    {
+      "citation": "sensAIfood / CRA-W, doi:10.5281/zenodo.16108496",
+      "content_sha256": "88bb6b78d94c49a6d76a94dd35d1b23d890b406adfa277a46281bfac0ffe91e3",
+      "fixed_test_rows": 1010,
+      "groups": {
+        "n_unique": 0,
+        "present": false
+      },
+      "license": "CC BY 4.0",
+      "loader": "benchmarks.run_dataset_matrix.load_nirbench_case",
+      "loader_arguments": {
+        "split": "fixed train/test",
+        "task": "30-Wheat_sensAIfood_CRAW_protein"
+      },
+      "loader_versions": {
+        "chemotools": "0.5.1.dev1+g199cb2385",
+        "spectralselector": "0.1.0.dev0"
+      },
+      "name": "nirbench_30",
+      "preprocessing": "none; loader output used without spectral preprocessing",
+      "shape": [
+        5046,
+        700
+      ],
+      "source": "NIRBENCH-DL v0.1, datasets/30-Wheat_sensAIfood_CRAW_protein",
+      "target": {
+        "n_responses": 1,
+        "names": [
+          "Protein"
+        ]
+      },
+      "task": "regression",
+      "wavelength_axis": {
+        "maximum": 2498.0,
+        "minimum": 1100.0,
+        "n_features": 700,
+        "sha256": "89bc69c36974da072b54c38eb77f6172d54f6f17f3b8160f806d8c4676f7c0ee"
+      }
+    }
+  ],
+  "datasets": [
+    "corn",
+    "diesel",
+    "shootout",
+    "nirbench_1",
+    "nirbench_2",
+    "nirbench_3",
+    "nirbench_5",
+    "nirbench_6",
+    "nirbench_7",
+    "nirbench_8",
+    "nirbench_9",
+    "nirbench_10",
+    "nirbench_11",
+    "nirbench_13",
+    "nirbench_15",
+    "nirbench_16",
+    "nirbench_17",
+    "nirbench_18",
+    "nirbench_19",
+    "nirbench_20",
+    "nirbench_21",
+    "nirbench_22",
+    "nirbench_23",
+    "nirbench_24",
+    "nirbench_25",
+    "nirbench_26",
+    "nirbench_27",
+    "nirbench_28",
+    "nirbench_29",
+    "nirbench_30"
+  ],
+  "git": {
+    "branch": "validation/pre-publication",
+    "dirty": true,
+    "revision": "953cc20e0a27ad871680987ef86bbde52640edd8"
+  },
+  "methods": [
+    "full_spectrum",
+    "random_subset",
+    "univariate",
+    "covsel",
+    "covsel_auto",
+    "fcovsel",
+    "mivif",
+    "mivif_auto",
+    "vip",
+    "selectivity_ratio",
+    "selectivity_ratio_ftest",
+    "cars",
+    "boss",
+    "genetic"
+  ],
+  "notes": {
+    "classifier": "Classification uses PLS-DA as the downstream model and inside VIP, SR, GA, and the length-validated selectors; CARS and BOSS build spectralselector.PLSDA internally.",
+    "fermentation_test": "Excluded because spectra and HPLC reference rows are time-aligned, not one-to-one supervised samples.",
+    "selector_repeats": "Only random_subset, CARS, BOSS, and genetic are repeated over selector seeds; deterministic methods are fitted once per fold."
+  },
+  "plsda_implementation": "chemotools.classification.PLSDA",
+  "profile": "smoke",
+  "runtime": {
+    "packages": {
+      "chemotools": "0.5.1.dev1+g199cb2385",
+      "joblib": "1.5.3",
+      "numpy": "2.4.3",
+      "pandas": "3.0.1",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.17.1",
+      "spectralselector": "0.1.0.dev0",
+      "tqdm": "4.70.1"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.16"
+  },
+  "schema_version": 4,
+  "skipped": [
+    {
+      "dataset": "corn",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "corn",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 2,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "corn",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 3,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "covsel_auto",
+      "outer_fold": 1,
+      "reason": "job failed: Cannot have number of splits n_splits=2 greater than the number of groups: 1.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "fcovsel",
+      "outer_fold": 1,
+      "reason": "job failed: Cannot have number of splits n_splits=2 greater than the number of groups: 1.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "mivif_auto",
+      "outer_fold": 1,
+      "reason": "job failed: Cannot have number of splits n_splits=2 greater than the number of groups: 1.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "cars",
+      "outer_fold": 1,
+      "reason": "job failed: No valid PLS component count could be evaluated.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "boss",
+      "outer_fold": 1,
+      "reason": "job failed: All BOSS population sub-models failed. Check the estimator, CV splitter, class counts, and component limits.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "genetic",
+      "outer_fold": 1,
+      "reason": "job failed: Every genetic-algorithm candidate failed. Check estimator requirements, scoring, CV, and group-count constraints.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "covsel_auto",
+      "outer_fold": 2,
+      "reason": "job failed: Cannot have number of splits n_splits=2 greater than the number of groups: 1.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "fcovsel",
+      "outer_fold": 2,
+      "reason": "job failed: Cannot have number of splits n_splits=2 greater than the number of groups: 1.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "mivif_auto",
+      "outer_fold": 2,
+      "reason": "job failed: Cannot have number of splits n_splits=2 greater than the number of groups: 1.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 2,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "cars",
+      "outer_fold": 2,
+      "reason": "job failed: No valid PLS component count could be evaluated.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "boss",
+      "outer_fold": 2,
+      "reason": "job failed: All BOSS population sub-models failed. Check the estimator, CV splitter, class counts, and component limits.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "genetic",
+      "outer_fold": 2,
+      "reason": "job failed: Every genetic-algorithm candidate failed. Check estimator requirements, scoring, CV, and group-count constraints.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "covsel_auto",
+      "outer_fold": 3,
+      "reason": "job failed: Cannot have number of splits n_splits=2 greater than the number of groups: 1.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "fcovsel",
+      "outer_fold": 3,
+      "reason": "job failed: Cannot have number of splits n_splits=2 greater than the number of groups: 1.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "mivif_auto",
+      "outer_fold": 3,
+      "reason": "job failed: Cannot have number of splits n_splits=2 greater than the number of groups: 1.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 3,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "cars",
+      "outer_fold": 3,
+      "reason": "job failed: No valid PLS component count could be evaluated.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "boss",
+      "outer_fold": 3,
+      "reason": "job failed: All BOSS population sub-models failed. Check the estimator, CV splitter, class counts, and component limits.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "shootout_2002",
+      "method": "genetic",
+      "outer_fold": 3,
+      "reason": "job failed: Every genetic-algorithm candidate failed. Check estimator requirements, scoring, CV, and group-count constraints.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_2",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_3",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_6",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_7",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_8",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_9",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_10",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_11",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_15",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_16",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_17",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_18",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_19",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_20",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_21",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_22",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_23",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_24",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_25",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_26",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_27",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_28",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_29",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    },
+    {
+      "dataset": "nirbench_30",
+      "method": "selectivity_ratio_ftest",
+      "outer_fold": 1,
+      "reason": "job failed: No variable reached the SR threshold. Lower threshold or set n_features_to_select.",
+      "selector_seed": 42
+    }
+  ]
+}

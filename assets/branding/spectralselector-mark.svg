@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">SpectralSelector compact mark</title>
+  <desc id="desc">A compact spectral curve with three informative peaks highlighted.</desc>
+  <rect width="256" height="256" rx="32" fill="#ffffff"/>
+  <path d="M24 150 C43 150 46 142 60 142 C74 142 76 151 88 151 C100 151 103 109 116 109 C129 109 131 147 144 147 C157 147 160 130 173 130 C186 130 189 68 202 68 C215 68 218 146 232 146" fill="none" stroke="#12314A" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="116" cy="109" r="9" fill="#E05263"/>
+  <circle cx="202" cy="68" r="9" fill="#E05263"/>
+  <circle cx="173" cy="130" r="9" fill="#E05263"/>
+  <path d="M24 184 H232" stroke="#39A6A3" stroke-width="7" stroke-linecap="round"/>
+</svg>

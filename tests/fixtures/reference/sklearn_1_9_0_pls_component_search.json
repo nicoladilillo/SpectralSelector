@@ -1,0 +1,63 @@
+{
+  "provenance": {
+    "implementation": "scikit-learn PLSRegression and cross_val_score",
+    "version": "1.9.0",
+    "generated_on": "2026-09-08",
+    "purpose": "Independent numerical reference for the PLS component search used inside CARSSelector and BOSSSelector"
+  },
+  "input": {
+    "row_range": [1, 32],
+    "selected_zero_based_indices": [0, 1, 2, 4, 5],
+    "n_samples": 32,
+    "n_total_features": 6
+  },
+  "model": {
+    "estimator": "PLSRegression",
+    "scale": false,
+    "component_candidates": [1, 2, 3, 4],
+    "cv": {
+      "class": "KFold",
+      "n_splits": 4,
+      "shuffle": true,
+      "random_state": 17
+    },
+    "scoring": "neg_root_mean_squared_error"
+  },
+  "expected": {
+    "fold_scores": {
+      "1": [
+        -0.3903133283220849,
+        -0.6288650506540318,
+        -0.4261920255253052,
+        -0.4725942221033496
+      ],
+      "2": [
+        -0.35862043260086746,
+        -0.4252276759688478,
+        -0.27561738802595964,
+        -0.3963205799216023
+      ],
+      "3": [
+        -0.16261117711588235,
+        -0.21766279064119304,
+        -0.24270020263757708,
+        -0.1828999237038152
+      ],
+      "4": [
+        -0.07909199218361149,
+        -0.0835716103607099,
+        -0.07620080981204796,
+        -0.09747946915057423
+      ]
+    },
+    "mean_scores": {
+      "1": -0.47949115665119285,
+      "2": -0.3639465191293193,
+      "3": -0.20146852352461692,
+      "4": -0.0840859703767359
+    },
+    "best_n_components": 4,
+    "best_mean_score": -0.0840859703767359,
+    "absolute_tolerance": 1e-12
+  }
+}

@@ -1,0 +1,36 @@
+name: Feature or method request
+description: Propose an API improvement or wavelength-selection method
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Scientific or user need
+      description: Explain the workflow that is currently difficult or impossible.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the API, expected output, and supported task types.
+    validations:
+      required: true
+  - type: input
+    id: reference
+    attributes:
+      label: Method reference
+      description: For a published selector, provide a DOI or stable publication URL.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation evidence
+      description: Suggest reference implementations, datasets, or expected numerical results.
+  - type: checkboxes
+    id: licensing
+    attributes:
+      label: Licensing
+      options:
+        - label: Any linked implementation and its licence are identified.
+          required: true

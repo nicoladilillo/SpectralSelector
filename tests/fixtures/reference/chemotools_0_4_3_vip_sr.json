@@ -1,0 +1,45 @@
+{
+  "source": {
+    "package": "chemotools",
+    "version": "0.4.3",
+    "classes": [
+      "VIPSelector",
+      "SRSelector"
+    ],
+    "model": "sklearn.cross_decomposition.PLSRegression",
+    "model_parameters": {
+      "n_components": 3,
+      "scale": false
+    }
+  },
+  "input": {
+    "construction": "rows = arange(1, 19); six documented analytic columns; columns and y centered",
+    "n_samples": 18,
+    "n_features": 6
+  },
+  "threshold": 1.0,
+  "vip_scores": [
+    0.9536934375108552,
+    1.0293554685689277,
+    0.632258818553616,
+    0.4038959390820941,
+    1.7583162444351155,
+    0.6134631104522409
+  ],
+  "vip_selected_indices": [
+    1,
+    4
+  ],
+  "sr_scores": [
+    0.7614889683425565,
+    1.1595734249450644,
+    0.19633297802094307,
+    0.03454134164013377,
+    0.8625668871205786,
+    0.7657452349425987
+  ],
+  "sr_selected_indices": [
+    1
+  ],
+  "absolute_tolerance": 1e-10
+}

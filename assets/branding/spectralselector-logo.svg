@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-labelledby="title desc">
+  <title id="title">SpectralSelector primary logo</title>
+  <desc id="desc">A spectral curve with three selected peaks and a stacked Spectral Selector wordmark.</desc>
+  <rect width="1000" height="260" fill="#ffffff"/>
+  <g transform="translate(42 46)">
+    <path d="M8 126 C35 126 42 117 62 117 C82 117 85 130 102 130 C119 130 124 73 142 73 C160 73 163 124 181 124 C199 124 203 101 221 101 C239 101 243 18 261 18 C279 18 284 119 302 119 C320 119 325 88 343 88 C361 88 366 126 394 126" fill="none" stroke="#12314A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="142" cy="73" r="10" fill="#E05263"/>
+    <circle cx="261" cy="18" r="10" fill="#E05263"/>
+    <circle cx="343" cy="88" r="10" fill="#E05263"/>
+    <path d="M8 150 H394" stroke="#39A6A3" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(468 42)">
+    <text x="0" y="76" fill="#12314A" font-family="Inter, Avenir Next, Helvetica, Arial, sans-serif" font-size="62" font-weight="650" letter-spacing="0">Spectral</text>
+    <text x="0" y="154" fill="#E05263" font-family="Inter, Avenir Next, Helvetica, Arial, sans-serif" font-size="62" font-weight="650" letter-spacing="0">Selector</text>
+  </g>
+</svg>
